@@ -249,6 +249,10 @@ main p {
   margin: 0 0 6px;
 }
 
+.hebergements > a:last-child {
+  font-weight: bold;
+}
+
 /****** Populaires ***********/
 .populaires-title {
   display: flex;
