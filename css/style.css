@@ -16,8 +16,7 @@
 
 body {
   margin: auto;
-  max-width: 1440px;
-  min-width: 320px;
+  width: 100%;
 }
 
 a {
@@ -376,7 +375,7 @@ footer {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 /* Medium devices (desktop, 1024px) */
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1440px) {
   /****** Hebergements and Populaires ***********/
   .hebergements,
   .populaires {
@@ -481,8 +480,8 @@ footer {
   }
 }
 
-/* Medium devices (tablets, 768px à 1023.98px) */
-@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+/* Medium devices (tablets, 1024px) */
+@media screen and (max-width: 1024px) {
   /******** Main ********/
   h1 {
     white-space: nowrap;
@@ -656,7 +655,7 @@ footer {
 }
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
   /****** Header ***********/
   header {
     flex-direction: column;
