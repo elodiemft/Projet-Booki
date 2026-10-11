@@ -60,7 +60,7 @@ header {
 
 main h1 {
   margin: 20px 0 5px;
-  font-size: 21px;
+  font-size: 22px;
 }
 
 .mobile-break {
@@ -485,7 +485,6 @@ footer {
   /******** Main ********/
   h1 {
     white-space: nowrap;
-    font-size: 22px;
   }
 
   /******** Search ********/
@@ -689,17 +688,25 @@ footer {
 
   /****** Main ***********/
   .main-container {
-    padding: 0 20px;
-  }
-
-  h1 {
-    font-size: 12px;
-    line-height: 1.2;
-    white-space: normal;
+    padding: 0;
   }
 
   .mobile-break {
     display: block;
+  }
+
+  main h1 {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  main h1,
+  main p,
+  .search-bar,
+  .filters-container,
+  .info {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   /******** Search ********/
