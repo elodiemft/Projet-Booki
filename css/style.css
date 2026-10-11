@@ -284,6 +284,7 @@ main p {
   width: 35%;
   height: 150px;
   border-radius: 20px 0 0 20px;
+  object-fit: cover;
 }
 
 .populaires-cards .card-content {
@@ -387,7 +388,7 @@ footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .hebergements-cards .card img {
+  .hebergements-cards img {
     height: 95px;
   }
 
@@ -552,7 +553,7 @@ footer {
     width: 100%;
   }
 
-  .hebergements-cards .card img {
+  .hebergements-cards img {
     height: 150px;
   }
 
