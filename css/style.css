@@ -15,8 +15,7 @@
 }
 
 body {
-  margin: auto;
-  width: 100%;
+  margin: 0;
 }
 
 a {
@@ -60,11 +59,7 @@ header {
 
 main h1 {
   margin: 20px 0 5px;
-  font-size: 22px;
-}
-
-.mobile-break {
-  display: none;
+  font-size: 21px;
 }
 
 main p {
@@ -121,7 +116,6 @@ main p {
   font-size: 18px;
   font-weight: bold;
   border-radius: 0 15px 15px 0;
-  cursor: pointer;
 }
 
 /****** Filters ***********/
@@ -268,6 +262,7 @@ main p {
   flex-direction: column;
   gap: 25px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .populaires-cards > a {
@@ -333,7 +328,7 @@ main p {
 
 .activity-card img {
   width: 100%;
-  height: 390px;
+  height: 400px;
   object-fit: cover;
   display: block;
 }
@@ -374,7 +369,7 @@ footer {
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
-/* Medium devices (desktop, 1024px) */
+/* Medium devices (desktop, 1440px) */
 @media screen and (max-width: 1440px) {
   /****** Hebergements and Populaires ***********/
   .hebergements,
@@ -457,22 +452,19 @@ footer {
     padding-left: 20px;
   }
 
-  .activities-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0 20px;
-  }
-
   .activity-card {
-    height: clamp(300px, 31vw, 450px);
+    display: flex;
+    flex-direction: column;
   }
 
   .activity-card img {
-    height: calc(100% - 70px);
+    flex: 1;
+    min-height: 0;
   }
 
   .activity-card h3 {
     height: 70px;
+    flex-shrink: 0;
   }
 
   .activities-cards > a {
@@ -485,6 +477,7 @@ footer {
   /******** Main ********/
   h1 {
     white-space: nowrap;
+    font-size: 22px;
   }
 
   /******** Search ********/
@@ -516,12 +509,16 @@ footer {
     gap: 40px;
   }
 
-  .hebergements-and-populaires .populaires {
+  .hebergements-and-populaires .hebergements {
     padding-bottom: 30px;
   }
 
+  .hebergements-and-populaires .populaires {
+    padding-bottom: 10px;
+  }
+
   .hebergements-and-populaires .populaires-cards {
-    margin-top: 0;
+    margin-top: 30px;
   }
 
   /******** Hebergements ********/
@@ -530,13 +527,11 @@ footer {
   }
 
   .hebergements .section-title {
-    font-size: 24px;
     margin: 0 0 30px;
     padding-bottom: 0;
   }
 
   .hebergements-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px 20px;
   }
 
@@ -559,24 +554,19 @@ footer {
     padding: 12px 15px 15px;
   }
 
+  .hebergements-cards .card-title,
+  .hebergements-cards .card-subtitle {
+    margin: 0 0 10px;
+    white-space: nowrap;
+  }
+
   .hebergements-cards .card-title {
     font-size: 14px;
     line-height: 1.2;
-    margin: 0 0 10px;
-    white-space: nowrap;
   }
 
   .hebergements-cards .card-subtitle {
     font-size: 16px;
-    margin: 0 0 10px;
-    white-space: nowrap;
-  }
-
-  .hebergements > a:last-child {
-    display: block;
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: bold;
   }
 
   /******** Populaires ********/
@@ -588,20 +578,15 @@ footer {
 
   .populaires-cards .card {
     height: 150px;
-    overflow: hidden;
   }
 
   /******** Activities ********/
   .activities-cards {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
-    padding: 0 20px;
   }
 
   .activities-cards > a {
     min-width: 0;
-    width: 100%;
   }
 
   .activity-card {
@@ -614,7 +599,6 @@ footer {
   }
 
   .activity-card h3 {
-    height: 70px;
     padding: 12px 15px;
     font-size: 14px;
     line-height: 1.2;
@@ -623,8 +607,8 @@ footer {
   /******** Footer ********/
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr 0.8fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
   }
 
   .footer-column {
@@ -639,11 +623,6 @@ footer {
 
   .footer-column a {
     white-space: nowrap;
-  }
-
-  .footer-column:nth-child(2),
-  .footer-column:nth-child(3) {
-    margin-left: 50px;
   }
 }
 
@@ -664,15 +643,13 @@ footer {
     width: 100%;
     gap: 0;
     margin: 20px 0 10px;
-    border-bottom: 3px solid #f2f2f2;
   }
 
   .header-container a {
     width: 50%;
     text-align: center;
     padding: 15px 0;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -3px;
+    border-bottom: 3px solid #f2f2f2;
   }
 
   .header-container a:hover {
@@ -683,10 +660,6 @@ footer {
   /****** Main ***********/
   .main-container {
     padding: 0;
-  }
-
-  .mobile-break {
-    display: block;
   }
 
   main h1 {
@@ -705,7 +678,7 @@ footer {
 
   /******** Search ********/
   .search-bar {
-    width: 100%;
+    width: auto;
   }
 
   .search-icon {
@@ -731,17 +704,9 @@ footer {
     justify-content: center;
     border-radius: 15px;
     margin-left: -10px;
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
   }
 
   /******** Filters ********/
-  .filters-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .filters {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -766,7 +731,6 @@ footer {
   }
 
   .hebergements-and-populaires {
-    flex-direction: column;
     width: 100%;
     gap: 0;
   }
@@ -779,14 +743,10 @@ footer {
 
   .hebergements-and-populaires .hebergements {
     background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .hebergements-and-populaires .populaires {
-    margin: 0 -20px;
-    width: calc(100% + 40px);
-    padding: 0 20px;
+    padding: 20px 20px 0;
     border-radius: 0;
   }
 
@@ -806,32 +766,14 @@ footer {
     padding-left: 0;
   }
 
-  .populaires-cards,
-  .hebergements-cards,
-  .activities-cards {
-    width: 100%;
-  }
-
-  .populaires-cards > a,
-  .hebergements-cards > a,
-  .activities-cards > a {
-    width: 100%;
-  }
-
-  .populaires-cards .card,
-  .hebergements-cards .card,
-  .activity-card {
-    width: 100%;
-  }
-
   /******** Populaires ********/
   .populaires-cards {
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
   .populaires-cards .card {
     height: 145px;
-    overflow: hidden;
   }
 
   .populaires-cards .card-content {
@@ -859,17 +801,15 @@ footer {
   }
 
   /******** Activities ********/
-  .activities-title {
-    margin-bottom: 15px;
-    padding-bottom: 0;
+  .activities {
+    padding: 0 20px;
   }
 
   .activities-cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
   .activity-card {
@@ -886,15 +826,9 @@ footer {
   }
 
   /******** Footer ********/
-  footer {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-
   .footer-container {
+    display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
