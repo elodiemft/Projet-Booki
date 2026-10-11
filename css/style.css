@@ -46,6 +46,7 @@ header {
 .header-container a {
   padding-top: 20px;
   font-size: 16px;
+  border-top: 3px solid transparent;
 }
 
 .header-container a:hover {
