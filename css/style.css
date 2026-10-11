@@ -591,12 +591,6 @@ footer {
     overflow: hidden;
   }
 
-  .populaires-cards img {
-    height: 100%;
-    flex-shrink: 0;
-    border-radius: 15px 0 0 15px;
-  }
-
   /******** Activities ********/
   .activities-cards {
     display: grid;
@@ -838,11 +832,6 @@ footer {
   .populaires-cards .card {
     height: 145px;
     overflow: hidden;
-  }
-
-  .populaires-cards img {
-    height: 100%;
-    flex-shrink: 0;
   }
 
   .populaires-cards .card-content {
