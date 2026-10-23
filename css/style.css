@@ -729,6 +729,10 @@ footer {
     order: 2;
   }
 
+  .hebergements {
+    order: 2;
+  }
+
   .hebergements-and-populaires {
     width: 100%;
     gap: 0;
